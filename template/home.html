@@ -1,0 +1,748 @@
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA_Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Paakashala</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Sancreek&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Sancreek&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css"
+    />
+    <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
+
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+
+      body {
+        overflow-x: hidden;
+        margin: 0 100px;
+        background-color: beige;
+        font-family: "Poppins", sans-serif;
+      }
+
+      .content {
+        background-color: white;
+        display: grid;
+        grid-template-columns: 60% 40%;
+        align-items: center;
+        gap: 0px;
+        padding: 20px;
+        justify-content: space-between;
+        width: 100%;
+      }
+
+      .content .content-left {
+        margin-top: 70px;
+        display: block;
+        width: 100%;
+      }
+
+      .content .content-left .info {
+        display: flex;
+        max-width: 100%;
+        flex-direction: column;
+      }
+
+      .content .content-left .info h2 {
+        font-size: 40px;
+        font-family: sans-serif;
+        margin-bottom: 30px;
+      }
+
+      .content .content-left .info p {
+        font-size: 20px;
+        font-family: sans-serif;
+        margin-bottom: 30px;
+        line-height: 2pc;
+      }
+
+      .content .content-left button {
+        padding: 10px 25px;
+        background-color: brown;
+        color: white;
+        border-radius: 5px;
+        border: none;
+        cursor: pointer;
+        margin-bottom: 70px;
+      }
+
+      .content .content-right {
+        display: block;
+        width: 100%;
+      }
+
+      .content .content-right img {
+        width: 350px;
+        height: auto;
+        position: relative;
+        animation: rotate 100s linear infinite;
+        user-select: none;
+      }
+
+      @keyframes rotate {
+        0% {
+          transform: rotate(0deg);
+        }
+        100% {
+          transform: rotate(360deg);
+        }
+      }
+
+      .nav {
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 30px 0;
+      }
+
+      .nav .logo h1 {
+        font-weight: 600;
+        font-family: "Sancreek", cursive;
+        color: black;
+      }
+
+      .nav ul {
+        display: flex;
+        list-style: none;
+      }
+
+      .nav ul li {
+        margin: 30px;
+      }
+
+      .nav ul li a {
+        text-decoration: none;
+        color: black;
+        font-weight: 500;
+        font-family: sans-serif;
+        font-size: 17px;
+      }
+
+      .nav ul li a:hover {
+        color: rgb(62, 3, 3);
+        background: navajowhite;
+        padding: 2px;
+        border-radius: 15px;
+      }
+
+      a {
+        text-decoration: none;
+        color: rgb(0, 0, 0);
+      }
+      p {
+        color: rgb(0, 0, 0);
+      }
+      .container {
+        max-width: 1300px;
+        margin: auto;
+        padding-left: 25px;
+        padding-right: 25px;
+      }
+      .row {
+        display: flex;
+        align-items: center;
+        flex-wrap: wrap;
+        justify-content: space-around;
+      }
+      .col-2 {
+        flex-basis: 50%;
+        min-width: 300px;
+      }
+      .col-2 img {
+        max-width: 100%;
+        padding: 10px 100px 10px 100px;
+      }
+      .col-2 h1 {
+        font-size: 50px;
+        line-height: 60px;
+        margin: 25px 0;
+      }
+      .btn {
+        display: inline-block;
+        background: brown;
+        color: white;
+        padding: 8px 30px;
+        margin: 30px 0;
+        border-radius: 30px;
+        cursor: pointer;
+      }
+      .btn:hover {
+        background: green;
+      }
+
+      input:focus {
+        outline: none;
+      }
+
+      #foot {
+        margin: 50px 10px 10px 50px;
+      }
+      #foot_ul {
+        list-style: none;
+      }
+      footer {
+        color: beige;
+        font-size: 18px;
+        font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+          "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+        background-color: brown;
+        width: 100%;
+        height: 320px;
+        position: absolute;
+        top: 2400px;
+        left: 2px;
+      }
+      #foot {
+        margin: 50px 10px 10px 50px;
+      }
+      #foot_ul {
+        list-style: none;
+      }
+      .footer-distributed .footer-left {
+        width: 30%;
+      }
+
+      .footer-distributed h3 {
+        color: beige;
+        font-family: "Times New Roman", Times, serif;
+        margin: 0;
+      }
+
+      .footer-distributed h3 span {
+        color: beige;
+      }
+      .footer-distributed .footer-links {
+        color: beige;
+        margin: 20px 0 12px;
+      }
+
+      .footer-distributed .footer-links a {
+        position: absolute;
+        left: 450px;
+        line-height: 1.8;
+        text-decoration: none;
+        color: inherit;
+      }
+
+      .footer-distributed .footer-company-name {
+        color: beige;
+        font-size: 14px;
+        font-weight: normal;
+        margin: 0;
+        position: absolute;
+        bottom: 40px;
+        left: 470px;
+        font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI",
+          Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue",
+          sans-serif;
+      }
+      .footer-center {
+        position: absolute;
+        left: 850px;
+        bottom: 120px;
+      }
+      .footer-distributed .footer-center {
+        width: 35%;
+      }
+
+      .footer-distributed .footer-center i {
+        background-color: bisque;
+        color: #080808;
+        font-size: 25px;
+        width: 38px;
+        height: 38px;
+        border-radius: 50%;
+        text-align: center;
+        line-height: 42px;
+        margin: 10px 15px;
+        vertical-align: middle;
+      }
+
+      .footer-distributed .footer-center i.fa-envelope {
+        font-size: 17px;
+        line-height: 38px;
+      }
+
+      .footer-distributed .footer-center p {
+        display: inline-block;
+        color: beige;
+        vertical-align: middle;
+        margin: 0;
+      }
+
+      .footer-distributed .footer-center p span {
+        display: block;
+        font-weight: normal;
+        font-size: 14px;
+        line-height: 2;
+      }
+
+      .footer-distributed .footer-center p a {
+        color: beige;
+        text-decoration: none;
+      }
+
+      #follow {
+        position: absolute;
+        left: 100px;
+        text-decoration: none;
+        bottom: 100px;
+        font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI",
+          Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue",
+          sans-serif;
+      }
+      #us {
+        font-size: 30px;
+        font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI",
+          Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue",
+          sans-serif;
+      }
+      #web {
+        font-size: 30px;
+        font-family: "Sancreek", cursive;
+      }
+      #content {
+        color: bisque;
+        font-size: 15px;
+      }
+      #aboutus {
+        position: absolute;
+        top: 10px;
+        left: 60px;
+        font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI",
+          Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue",
+          sans-serif;
+      }
+      .fa {
+        color: bisque;
+      }
+
+      .home {
+        padding: 100px;
+      }
+      .home .slide {
+        min-height: 100vh;
+        background-size: cover !important ;
+        background-position: center !important;
+        position: relative;
+        z-index: 0;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+
+      .home .slide::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        height: 100%;
+        width: 100%;
+        background: rgba(0, 0, 0, 0.7);
+        z-index: -1;
+      }
+      .home .slide .cont {
+        text-align: center;
+        width: 70rem;
+      }
+      .home .slide .cont span {
+        font-size: 3rem;
+        display: block;
+        padding-bottom: 5rem;
+        color: rgb(255, 255, 255, 0.7);
+      }
+      .home .slide .cont h3 {
+        font-size: 5vw;
+        text-transform: uppercase;
+        color: white;
+        text-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.7);
+        line-height: 1;
+        padding: 2rem 0;
+      }
+
+      .swiper-button-next,
+      .swiper-button-prev {
+        height: 5rem;
+        width: 5rem;
+        line-height: 5rem;
+        background-color: rgba(255, 255, 255, 0.5);
+        color: black;
+        border-radius: 50px;
+      }
+      .swiper-button-next:hover,
+      .swiper-button-prev:hover {
+        background: transparent;
+      }
+
+      .swiper-button-next::after,
+      .swiper-button-prev::after {
+        font-size: 2rem;
+      }
+
+      .course {
+        width: 80%;
+        margin: auto;
+        margin-top: 0;
+        text-align: center;
+        padding-top: 0px;
+      }
+      h1 {
+        font-size: 36px;
+        font-weight: 600;
+      }
+      p {
+        color: #000;
+        font-size: 14px;
+        font-weight: 300;
+        line-height: 22px;
+        padding: 10px;
+      }
+      .row {
+        margin-top: 5%;
+        display: flex;
+        justify-content: space-between;
+      }
+      .course-col {
+        flex-basis: 31%;
+        background: #daa06d;
+        border-radius: 10px;
+        margin-bottom: 5%;
+        padding: 20px 12px;
+      }
+      h3 {
+        text-align: center;
+        font-weight: 600;
+        margin: 10px 0;
+      }
+      .course-col:hover {
+        box-shadow: 0 0 20px 0px rgba(0, 0, 0, 0.2);
+      }
+    </style>
+  </head>
+  <body>
+    <section class="menu">
+      <div class="nav">
+        <div class="logo">
+          <a href="home.html"><img src="../images/logo.png" width="150px" /></a>
+        </div>
+        <ul>
+          <li><a href="{{url_for('home')}}">Home</a></li>
+          <li><a href="#">About Us</a></li>
+          <li><a href="{{url_for('products')}}">Products</a></li>
+          <li>
+            <a href="cart.html"
+              ><img src="../images/basket.png" width="50px" height="50px"
+            /></a>
+          </li>
+        </ul>
+      </div>
+    </section>
+    <section class="grid">
+      <div class="content">
+        <div class="content-left">
+          <div class="info">
+            <h2>
+              Flavor begins with the right tools<br />Start cooking with love!!
+            </h2>
+            <br />
+            <p>
+              A shop for quality kitchen appliances.<br />Be the chef of your
+              dreams.
+            </p>
+          </div>
+          <form method="post" action="{{url_for('productss')}}">
+            <button>Explore Now</button>
+          </form>
+        </div>
+        <div class="content-right">
+          <img src="../images/in.png" alt="image" />
+        </div>
+      </div>
+    </section>
+
+    <section class="home" id="home">
+      <h1 style="text-align: center">About Us</h1>
+      <div class="swiper home-slider">
+        <div class="swiper-wrapper">
+          <div
+            class="swiper-slide slide"
+            style="background: url(/images/slide1.jpg) no-repeat"
+          >
+            <div class="cont">
+              <span>Culinary Harmony</span>
+              <h3>Art of Cooking</h3>
+            </div>
+          </div>
+
+          <div
+            class="swiper-slide slide"
+            style="background: url(/images/slide2.jpg) no-repeat"
+          >
+            <div class="cont">
+              <span>Culinary Creations</span>
+              <h3>Epic Food Journeys</h3>
+            </div>
+          </div>
+
+          <div
+            class="swiper-slide slide"
+            style="background: url(/images/slide3.jpg) no-repeat"
+          >
+            <div class="cont">
+              <span>Culinary Adventures</span>
+              <h3>Foodie Paradise</h3>
+            </div>
+          </div>
+
+          <div
+            class="swiper-slide slide"
+            style="background: url(/images/slide4.jpg) no-repeat"
+          >
+            <div class="cont">
+              <span>Culinary Masterpiece</span>
+              <h3>Chef's Delight</h3>
+            </div>
+          </div>
+        </div>
+        <div class="swiper-button-next"></div>
+        <div class="swiper-button-prev"></div>
+      </div>
+    </section>
+
+    <section class="course">
+      <div class="row">
+        <div class="course-col">
+          <h3>Quality</h3>
+          <p>
+            Impeccable quality for unforgettable culinary experiences. Crafted
+            with precision to stand the test of time.
+          </p>
+        </div>
+        <div class="course-col">
+          <h3>Durability</h3>
+          <p>
+            Our utensils are built to last, ensuring lasting memories in your
+            kitchen. Designed with durability in mind, so you can rely on them
+            for years to come.
+          </p>
+        </div>
+        <div class="course-col">
+          <h3>Mission and Values</h3>
+          <p>
+            Quality-driven, customer-focused, and environmentally responsible.
+            We believe in offering products that elevate your cooking
+            experience.
+          </p>
+        </div>
+      </div>
+      <div class="row">
+        <div class="course-col">
+          <h3>Versatile Solutions</h3>
+          <p>
+            Whether you're a gourmet chef or a novice cook, our range offers
+            versatile solutions for all.
+          </p>
+        </div>
+        <div class="course-col">
+          <h3>Sustainability</h3>
+          <p>
+            We're committed to sustainability, with eco-friendly options in our
+            lineup.
+          </p>
+        </div>
+        <div class="course-col">
+          <h3>Exquisite Materials</h3>
+          <p>
+            We source only the finest materials, ensuring the quality and
+            longevity of our products.
+          </p>
+        </div>
+      </div>
+      <div class="row">
+        <div class="course-col">
+          <h3>Innovative Design</h3>
+          <p>
+            We blend innovation with tradition to create kitchen tools that are
+            both functional and visually appealing.
+          </p>
+        </div>
+        <div class="course-col">
+          <h3>Expert Craftsmanship</h3>
+          <p>
+            Our products are the result of expert craftsmanship, ensuring
+            precision and perfection in every detail.
+          </p>
+        </div>
+        <div class="course-col">
+          <h3>Variety</h3>
+          <p>
+            Explore our wide range of products in a spectrum of vibrant colors.
+            We have kitchen tools to match every style and need.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <footer class="footer-distributed">
+      <div class="footer-left">
+        <p
+          class="footer-links"
+          style="
+            position: absolute;
+            bottom: 90px;
+            left: 90px;
+            font-family: system-ui, -apple-system, BlinkMacSystemFont,
+              'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans',
+              'Helvetica Neue', sans-serif;
+          "
+        >
+          <a
+            href="#top"
+            style="position: absolute; top: -150px; font-weight: 999"
+            >Home</a
+          >
+          <a
+            href="#home"
+            style="position: absolute; top: -100px; font-weight: 999"
+            >About</a
+          >
+          <a
+            href="products.html"
+            style="position: absolute; top: -50px; font-weight: 999"
+            >Products</a
+          >
+        </p>
+
+        <p class="footer-company-name">
+          Copyright © 2023
+          <span style="font-family: 'Sancreek', cursive; font-size: 14px"
+            >paakashala</span
+          >
+          All rights reserved
+        </p>
+      </div>
+      <div class="footer-center">
+        <div>
+          <i class="fa fa-map-marker"></i>
+          <p
+            style="
+              font-family: system-ui, -apple-system, BlinkMacSystemFont,
+                'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans',
+                'Helvetica Neue', sans-serif;
+            "
+          >
+            Bengaluru,Karnataka
+          </p>
+        </div>
+
+        <div>
+          <i class="fa fa-phone"></i>
+          <a
+            href="tel:+91 98786858"
+            style="
+              font-size: medium;
+              text-decoration: none;
+              text-transform: none;
+              color: beige;
+              font-family: system-ui, -apple-system, BlinkMacSystemFont,
+                'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans',
+                'Helvetica Neue', sans-serif;
+            "
+            >+91 98786858</a
+          >
+        </div>
+        <div>
+          <i class="fa fa-envelope"></i>
+          <a
+            href="mailto:paakashala@gmail.com"
+            style="
+              font-family: system-ui, -apple-system, BlinkMacSystemFont,
+                'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans',
+                'Helvetica Neue', sans-serif;
+              text-decoration: none;
+              text-transform: none;
+              color: beige;
+            "
+          >
+            paakashala@gmail.com</a
+          >
+        </div>
+      </div>
+      <div id="footer-right">
+        <section>
+          <div id="aboutus">
+            <b id="web"><span style="font-size: 40px">paakashala</span></b>
+            <p id="content">
+              A shop for quality kitchen appliances.<br />Be the chef of your
+              dreams.
+            </p>
+          </div>
+        </section>
+        <section>
+          <div id="follow">
+            <h4 id="us">Follow us on</h4>
+            <a href="#"><span class="fa fa-facebook-f"></span></a
+            >&nbsp;&nbsp;&nbsp;&nbsp;
+            <a href="#"><span class="fa fa-twitter"></span></a
+            >&nbsp;&nbsp;&nbsp;&nbsp;
+            <a href="#"><span class="fa fa-instagram"></span></a
+            >&nbsp;&nbsp;&nbsp;&nbsp;
+            <a href="#"><span class="fa fa-youtube"></span></a
+            >&nbsp;&nbsp;&nbsp;&nbsp;
+            <a href="#"><span class="fa fa-linkedin"></span></a>
+          </div>
+        </section>
+      </div>
+    </footer>
+    <script
+      type="module"
+      src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"
+    ></script>
+    <script
+      nomodule
+      src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"
+    ></script>
+    <script src="https://unpkg.com/swiper@8/swiper-bundle.min.js"></script>
+    <script>
+      var swiper = new Swiper(".home-slider", {
+        grabCursor: true,
+        loop: true,
+        navigation: {
+          nextEl: ".swiper-button-next",
+          prevEl: ".swiper-button-prev",
+        },
+      });
+    </script>
+  </body>
+</html>

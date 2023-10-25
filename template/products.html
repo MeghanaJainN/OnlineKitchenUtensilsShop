@@ -1,0 +1,1054 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Paakashala</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Sancreek&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Sancreek&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+
+      body {
+        margin: 0 100px;
+        background-color: beige;
+        font-family: "Poppins", sans-serif;
+      }
+
+      .nav {
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 30px 0;
+      }
+
+      .nav .logo h1 {
+        font-weight: 600;
+        font-family: "Sancreek", cursive;
+        color: black;
+      }
+
+      .nav ul {
+        display: flex;
+        list-style: none;
+      }
+
+      .nav ul li {
+        margin: 30px;
+      }
+
+      .nav ul li a {
+        text-decoration: none;
+        color: black;
+        font-weight: 500;
+        font-family: sans-serif;
+        font-size: 17px;
+      }
+
+      .nav ul li a:hover {
+        color: rgb(62, 3, 3);
+        background: navajowhite;
+        padding: 2px;
+        border-radius: 15px;
+      }
+
+      a {
+        text-decoration: none;
+        color: rgb(0, 0, 0);
+      }
+      p {
+        color: rgb(0, 0, 0);
+      }
+      .container {
+        max-width: 1300px;
+        margin: auto;
+        padding-left: 25px;
+        padding-right: 25px;
+      }
+      .row {
+        display: flex;
+        align-items: center;
+        flex-wrap: wrap;
+        justify-content: space-around;
+      }
+      .col-2 {
+        flex-basis: 50%;
+        min-width: 300px;
+      }
+      .col-2 img {
+        max-width: 100%;
+        padding: 10px 100px 10px 100px;
+      }
+      .col-2 h1 {
+        font-size: 50px;
+        line-height: 60px;
+        margin: 25px 0;
+      }
+      .btn {
+        display: inline-block;
+        background: palevioletred;
+        color: black;
+        padding: 8px 30px;
+        margin: 30px 0;
+        border-radius: 30px;
+        transition: background 0.5s;
+      }
+      .btn:hover {
+        background: #fff;
+      }
+
+      .small-container {
+        max-width: 1080px;
+        margin: auto;
+        padding-left: 25px;
+        padding-right: 25px;
+      }
+      .col-4 {
+        flex-basis: 25%;
+        padding: 10px;
+        min-width: 200px;
+        margin-bottom: 50px;
+        transition: transform 0.5s;
+      }
+      .title {
+        text-align: center;
+        margin: 50px auto 50px;
+        position: relative;
+        line-height: 60px;
+        color: #555;
+      }
+      .h4 {
+        color: black;
+        font-weight: normal;
+      }
+      .col-4 p {
+        font-size: 14px;
+      }
+
+      .col-4 .heart-icon {
+        font-size: 1.2em;
+        color: #000;
+        transition: color 0.3s;
+        float: right;
+        margin-left: 10px;
+      }
+
+      .rating .fa {
+        color: gold;
+      }
+      .col-4:hover {
+        transform: translateY(-5px);
+      }
+      .col-4 .btn {
+        display: inline-block;
+        background: brown;
+        color: white;
+        padding: 10px;
+        margin: 0px 0;
+        border-radius: 30px;
+        transition: background 0.5s;
+      }
+      .col-4 .btn:hover {
+        background: green;
+        color: #fff;
+      }
+      .col-4 input {
+        width: 50px;
+        height: 30px;
+        padding-left: 10px;
+        font-size: 15px;
+        margin-right: 10px;
+        border: 1px solid #000;
+        border-radius: 10px;
+        background: transparent;
+      }
+
+      input:focus {
+        outline: none;
+      }
+
+      #foot {
+        margin: 50px 10px 10px 50px;
+      }
+      #foot_ul {
+        list-style: none;
+      }
+      footer {
+        color: beige;
+        font-size: 18px;
+        font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+          "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+        background-color: brown;
+        width: 100%;
+        height: 320px;
+        position: absolute;
+        top: 2000px;
+        left: 2px;
+      }
+      #foot {
+        margin: 50px 10px 10px 50px;
+      }
+      #foot_ul {
+        list-style: none;
+      }
+      .footer-distributed .footer-left {
+        width: 30%;
+      }
+
+      .footer-distributed h3 {
+        color: beige;
+        font-family: "Times New Roman", Times, serif;
+        margin: 0;
+      }
+
+      .footer-distributed h3 span {
+        color: beige;
+      }
+      .footer-distributed .footer-links {
+        color: beige;
+        margin: 20px 0 12px;
+      }
+
+      .footer-distributed .footer-links a {
+        position: absolute;
+        left: 450px;
+        line-height: 1.8;
+        text-decoration: none;
+        color: inherit;
+      }
+
+      .footer-distributed .footer-company-name {
+        color: beige;
+        font-size: 14px;
+        font-weight: normal;
+        margin: 0;
+        position: absolute;
+        bottom: 40px;
+        left: 470px;
+        font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI",
+          Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue",
+          sans-serif;
+      }
+      .footer-center {
+        position: absolute;
+        left: 850px;
+        bottom: 120px;
+      }
+      .footer-distributed .footer-center {
+        width: 35%;
+      }
+
+      .footer-distributed .footer-center i {
+        background-color: bisque;
+        color: #080808;
+        font-size: 25px;
+        width: 38px;
+        height: 38px;
+        border-radius: 50%;
+        text-align: center;
+        line-height: 42px;
+        margin: 10px 15px;
+        vertical-align: middle;
+      }
+
+      .footer-distributed .footer-center i.fa-envelope {
+        font-size: 17px;
+        line-height: 38px;
+      }
+
+      .footer-distributed .footer-center p {
+        display: inline-block;
+        color: beige;
+        vertical-align: middle;
+        margin: 0;
+      }
+
+      .footer-distributed .footer-center p span {
+        display: block;
+        font-weight: normal;
+        font-size: 14px;
+        line-height: 2;
+      }
+
+      .footer-distributed .footer-center p a {
+        color: beige;
+        text-decoration: none;
+      }
+
+      #follow {
+        position: absolute;
+        left: 100px;
+        text-decoration: none;
+        bottom: 100px;
+        font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI",
+          Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue",
+          sans-serif;
+      }
+      #us {
+        font-size: 30px;
+        font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI",
+          Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue",
+          sans-serif;
+      }
+      #web {
+        font-size: 30px;
+        font-family: "Sancreek", cursive;
+      }
+      #content {
+        color: bisque;
+        font-size: 15px;
+      }
+      #aboutus {
+        position: absolute;
+        top: 10px;
+        left: 60px;
+        font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI",
+          Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue",
+          sans-serif;
+      }
+      .fa {
+        color: bisque;
+      }
+    </style>
+  </head>
+  <body>
+    <section class="menu">
+      <div class="nav">
+        <div class="logo">
+          <a href="home.html"><img src="../images/logo.png" width="150px" /></a>
+        </div>
+        <ul>
+          <li><a href="{{url_for('home')}}">Home</a></li>
+          <li><a href="#">About Us</a></li>
+          <li><a href="{{url_for('products')}}">Products</a></li>
+          <li>
+            <a href="cart.html"
+              ><img src="../images/basket.png" width="70px" height="70px"
+            /></a>
+          </li>
+        </ul>
+      </div>
+    </section>
+    <div class="small-container">
+      <div class="row">
+        <div class="col-4">
+          <form method="post" action="{{url_for('add_to_db')}}">
+            <input
+              type="hidden"
+              value="Steel Spoon"
+              id="product_name"
+              name="product_name"
+            />
+            <input
+              type="hidden"
+              value="30.00"
+              id="product_price"
+              name="product_price"
+            />
+            <img src="../images/Spoon.jpeg" width="250px" height="250px" />
+            <h4>Steel Spoon</h4>
+            <div class="rating">
+              <i class="fa fa-star"></i>
+              <i class="fa fa-star"></i>
+              <i class="fa fa-star"></i>
+              <i class="fa fa-star"></i>
+              <i class="fa fa-star"></i>
+            </div>
+            <p>₹30.00</p>
+            <input
+              type="number"
+              name="product_quantity"
+              id="product_quantity"
+              min="0"
+              value="1"
+            />
+            <button type="submit" class="btn">Add To Cart</button>
+          </form>
+        </div>
+
+        <div class="col-4">
+          <form method="post" action="{{url_for('add_to_db')}}">
+            <input
+              type="hidden"
+              value="Steel Fork"
+              id="product_name"
+              name="product_name"
+            />
+            <input
+              type="hidden"
+              value="30.00"
+              id="product_price"
+              name="product_price"
+            />
+            <img src="../images/Fork.jpeg" width="250px" height="250px" />
+            <h4>Steel Fork</h4>
+            <div class="rating">
+              <i class="fa fa-star"></i>
+              <i class="fa fa-star"></i>
+              <i class="fa fa-star"></i>
+              <i class="fa fa-star"></i>
+              <i class="fa fa-star-half-o"></i>
+            </div>
+            <p>₹30.00</p>
+            <input
+              type="number"
+              name="product_quantity"
+              id="product_quantity"
+              min="0"
+              value="1"
+            />
+            <button type="submit" class="btn">Add To Cart</button>
+          </form>
+        </div>
+        <div class="col-4">
+          <form method="post" action="{{url_for('add_to_db')}}">
+            <input
+              type="hidden"
+              value="Stainless Steel Tongs"
+              id="product_name"
+              name="product_name"
+            />
+            <input
+              type="hidden"
+              value="160.00"
+              id="product_price"
+              name="product_price"
+            />
+            <img src="../images/Tongs.jpeg" width="250px" height="250px" />
+            <h4>Stainless Steel Tongs</h4>
+            <div class="rating">
+              <i class="fa fa-star"></i>
+              <i class="fa fa-star"></i>
+              <i class="fa fa-star"></i>
+              <i class="fa fa-star-half-o"></i>
+              <i class="fa fa-star-o"></i>
+            </div>
+            <p>₹160.00</p>
+            <input
+              type="number"
+              name="product_quantity"
+              id="product_quantity"
+              min="0"
+              value="1"
+            />
+            <button type="submit" class="btn">Add To Cart</button>
+          </form>
+        </div>
+        <div class="col-4">
+          <form method="post" action="{{url_for('add_to_db')}}">
+            <input
+              type="hidden"
+              value="Steel Louche"
+              id="product_name"
+              name="product_name"
+            />
+            <input
+              type="hidden"
+              value="250.00"
+              id="product_price"
+              name="product_price"
+            />
+            <img src="../images/Louche.jpeg" width="250px" height="250px" />
+            <h4>Steel Louche</h4>
+            <div class="rating">
+              <i class="fa fa-star"></i>
+              <i class="fa fa-star"></i>
+              <i class="fa fa-star"></i>
+              <i class="fa fa-star"></i>
+              <i class="fa fa-star-half-o"></i>
+            </div>
+            <p>₹250.00</p>
+            <input
+              type="number"
+              name="product_quantity"
+              id="product_quantity"
+              min="0"
+              value="1"
+            />
+            <button type="submit" class="btn">Add To Cart</button>
+          </form>
+        </div>
+        <div class="col-4">
+          <form method="post" action="{{url_for('add_to_db')}}">
+            <input
+              type="hidden"
+              value="Whisk"
+              id="product_name"
+              name="product_name"
+            />
+            <input
+              type="hidden"
+              value="180.00"
+              id="product_price"
+              name="product_price"
+            />
+            <img src="../images/Whisk.jpeg" width="250px" height="250px" />
+            <h4>Whisk</h4>
+            <div class="rating">
+              <i class="fa fa-star"></i>
+              <i class="fa fa-star"></i>
+              <i class="fa fa-star"></i>
+              <i class="fa fa-star"></i>
+              <i class="fa fa-star"></i>
+            </div>
+            <p>₹180.00</p>
+            <input
+              type="number"
+              name="product_quantity"
+              id="product_quantity"
+              min="0"
+              value="1"
+            />
+            <button type="submit" class="btn">Add To Cart</button>
+          </form>
+        </div>
+        <div class="col-4">
+          <form method="post" action="{{url_for('add_to_db')}}">
+            <input
+              type="hidden"
+              value="Lime Squeezer"
+              id="product_name"
+              name="product_name"
+            />
+            <input
+              type="hidden"
+              value="360.00"
+              id="product_price"
+              name="product_price"
+            />
+            <img
+              src="../images/Lime Squeezer.jpeg"
+              width="250px"
+              height="250px"
+            />
+            <h4>Lime Squeezer</h4>
+            <div class="rating">
+              <i class="fa fa-star"></i>
+              <i class="fa fa-star"></i>
+              <i class="fa fa-star"></i>
+              <i class="fa fa-star"></i>
+              <i class="fa fa-star-o"></i>
+            </div>
+            <p>₹360.00</p>
+            <input
+              type="number"
+              name="product_quantity"
+              id="product_quantity"
+              min="0"
+              value="1"
+            />
+            <button type="submit" class="btn">Add To Cart</button>
+          </form>
+        </div>
+        <div class="col-4">
+          <form method="post" action="{{url_for('add_to_db')}}">
+            <input
+              type="hidden"
+              value="Egg Beater"
+              id="product_name"
+              name="product_name"
+            />
+            <input
+              type="hidden"
+              value="80.00"
+              id="product_price"
+              name="product_price"
+            />
+            <img src="../images/eggbeater.jpeg" width="250px" height="250px" />
+            <h4>Egg Beater</h4>
+            <div class="rating">
+              <i class="fa fa-star"></i>
+              <i class="fa fa-star"></i>
+              <i class="fa fa-star"></i>
+              <i class="fa fa-star"></i>
+              <i class="fa fa-star"></i>
+            </div>
+            <p>₹80.00</p>
+            <input
+              type="number"
+              name="product_quantity"
+              id="product_quantity"
+              min="0"
+              value="1"
+            />
+            <button type="submit" class="btn">Add To Cart</button>
+          </form>
+        </div>
+        <div class="col-4">
+          <form method="post" action="{{url_for('add_to_db')}}">
+            <input
+              type="hidden"
+              value="Steel Measuring Spoons"
+              id="product_name"
+              name="product_name"
+            />
+            <input
+              type="hidden"
+              value="400.00"
+              id="product_price"
+              name="product_price"
+            />
+            <img
+              src="../images/Measuring Spoons.jpeg"
+              width="250px"
+              height="250px"
+            />
+            <h4>Steel Measuring Spoons</h4>
+            <div class="rating">
+              <i class="fa fa-star"></i>
+              <i class="fa fa-star"></i>
+              <i class="fa fa-star"></i>
+              <i class="fa fa-star"></i>
+              <i class="fa fa-star-half-o"></i>
+            </div>
+            <p>₹400.00</p>
+            <input
+              type="number"
+              name="product_quantity"
+              id="product_quantity"
+              min="0"
+              value="1"
+            />
+            <button type="submit" class="btn">Add To Cart</button>
+          </form>
+        </div>
+        <div class="col-4">
+          <form method="post" action="{{url_for('add_to_db')}}">
+            <input
+              type="hidden"
+              value="Stainless steel strainer"
+              id="product_name"
+              name="product_name"
+            />
+            <input
+              type="hidden"
+              value="150.00"
+              id="product_price"
+              name="product_price"
+            />
+            <img
+              src="../images/Stainless steel strainer.jpeg"
+              width="250px"
+              height="250px"
+            />
+            <h4>Stainless steel strainer</h4>
+            <div class="rating">
+              <i class="fa fa-star"></i>
+              <i class="fa fa-star"></i>
+              <i class="fa fa-star"></i>
+              <i class="fa fa-star"></i>
+              <i class="fa fa-star"></i>
+            </div>
+            <p>₹150.00</p>
+            <input
+              type="number"
+              name="product_quantity"
+              id="product_quantity"
+              min="0"
+              value="1"
+            />
+            <button type="submit" class="btn">Add To Cart</button>
+          </form>
+        </div>
+        <div class="col-4">
+          <form method="post" action="{{url_for('add_to_db')}}">
+            <input
+              type="hidden"
+              value="Cheese Grater"
+              id="product_name"
+              name="product_name"
+            />
+            <input
+              type="hidden"
+              value="350.00"
+              id="product_price"
+              name="product_price"
+            />
+            <img
+              src="../images/Wood Handled Cheese Grater.jpeg"
+              width="250px"
+              height="250px"
+            />
+            <h4>Cheese Grater</h4>
+            <div class="rating">
+              <i class="fa fa-star"></i>
+              <i class="fa fa-star"></i>
+              <i class="fa fa-star"></i>
+              <i class="fa fa-star"></i>
+              <i class="fa fa-star-half-o"></i>
+            </div>
+            <p>₹350.00</p>
+            <input
+              type="number"
+              name="product_quantity"
+              id="product_quantity"
+              min="0"
+              value="1"
+            />
+            <button type="submit" class="btn">Add To Cart</button>
+          </form>
+        </div>
+        <div class="col-4">
+          <form method="post" action="{{url_for('add_to_db')}}">
+            <input
+              type="hidden"
+              value="Spatula"
+              id="product_name"
+              name="product_name"
+            />
+            <input
+              type="hidden"
+              value="100.00"
+              id="product_price"
+              name="product_price"
+            />
+            <img src="../images/Spatula.jpeg" width="250px" height="250px" />
+            <h4>Spatula</h4>
+            <div class="rating">
+              <i class="fa fa-star"></i>
+              <i class="fa fa-star"></i>
+              <i class="fa fa-star-half-o"></i>
+              <i class="fa fa-star-o"></i>
+              <i class="fa fa-star-o"></i>
+            </div>
+            <p>₹100.00</p>
+            <input
+              type="number"
+              name="product_quantity"
+              id="product_quantity"
+              min="0"
+              value="1"
+            />
+            <button type="submit" class="btn">Add To Cart</button>
+          </form>
+        </div>
+        <div class="col-4">
+          <form method="post" action="{{url_for('add_to_db')}}">
+            <input
+              type="hidden"
+              value="Saute"
+              id="product_name"
+              name="product_name"
+            />
+            <input
+              type="hidden"
+              value="100.00"
+              id="product_price"
+              name="product_price"
+            />
+            <img src="../images/Saute.jpeg" width="250px" height="250px" />
+            <h4>Saute(set of 2)</h4>
+            <div class="rating">
+              <i class="fa fa-star"></i>
+              <i class="fa fa-star"></i>
+              <i class="fa fa-star"></i>
+              <i class="fa fa-star-o"></i>
+              <i class="fa fa-star-o"></i>
+            </div>
+            <p>₹100.00</p>
+            <input
+              type="number"
+              name="product_quantity"
+              id="product_quantity"
+              min="0"
+              value="1"
+            />
+            <button type="submit" class="btn">Add To Cart</button>
+          </form>
+        </div>
+
+        <div class="col-4">
+          <form method="post" action="{{url_for('add_to_db')}}">
+            <input
+              type="hidden"
+              value="Cookware Sets(Mint)"
+              id="product_name"
+              name="product_name"
+            />
+            <input
+              type="hidden"
+              value="850.00"
+              id="product_price"
+              name="product_price"
+            />
+            <img
+              src="../images/Malene Set - Mint Green.jpeg"
+              width="250px"
+              height="250px"
+            />
+            <h4>Cookware Sets(Mint)</h4>
+            <div class="rating">
+              <i class="fa fa-star"></i>
+              <i class="fa fa-star"></i>
+              <i class="fa fa-star"></i>
+              <i class="fa fa-star"></i>
+              <i class="fa fa-star"></i>
+            </div>
+            <p>₹850.00</p>
+            <input
+              type="number"
+              name="product_quantity"
+              id="product_quantity"
+              min="0"
+              value="1"
+            />
+            <button type="submit" class="btn">Add To Cart</button>
+          </form>
+        </div>
+        <div class="col-4">
+          <form method="post" action="{{url_for('add_to_db')}}">
+            <input
+              type="hidden"
+              value="Cookware Sets(Pink)"
+              id="product_name"
+              name="product_name"
+            />
+            <input
+              type="hidden"
+              value="850.00"
+              id="product_price"
+              name="product_price"
+            />
+            <img
+              src="../images/Kitchen Cookware Sets.jpeg"
+              width="250px"
+              height="250px"
+            />
+            <h4>Cookware Sets(Pink)</h4>
+            <div class="rating">
+              <i class="fa fa-star"></i>
+              <i class="fa fa-star"></i>
+              <i class="fa fa-star"></i>
+              <i class="fa fa-star"></i>
+              <i class="fa fa-star-half-o"></i>
+            </div>
+            <p>₹850.00</p>
+            <input
+              type="number"
+              name="product_quantity"
+              id="product_quantity"
+              min="0"
+              value="1"
+            />
+            <button type="submit" class="btn">Add To Cart</button>
+          </form>
+        </div>
+        <div class="col-4">
+          <form method="post" action="{{url_for('add_to_db')}}">
+            <input
+              type="hidden"
+              value="Silicone Tongs"
+              id="product_name"
+              name="product_name"
+            />
+            <input
+              type="hidden"
+              value="320.00"
+              id="product_price"
+              name="product_price"
+            />
+            <img
+              src="../images/SiliconeTongs.jpeg"
+              width="250px"
+              height="250px"
+            />
+            <h4>Silicone Tongs (Set)</h4>
+            <div class="rating">
+              <i class="fa fa-star"></i>
+              <i class="fa fa-star"></i>
+              <i class="fa fa-star"></i>
+              <i class="fa fa-star-half-o"></i>
+              <i class="fa fa-star-o"></i>
+            </div>
+            <p>₹320.00</p>
+            <input
+              type="number"
+              name="product_quantity"
+              id="product_quantity"
+              min="0"
+              value="1"
+            />
+            <button type="submit" class="btn">Add To Cart</button>
+          </form>
+        </div>
+        <div class="col-4">
+          <form method="post" action="{{url_for('add_to_db')}}">
+            <input
+              type="hidden"
+              value="Kitchen Knife Set"
+              id="product_name"
+              name="product_name"
+            />
+            <input
+              type="hidden"
+              value="760.00"
+              id="product_price"
+              name="product_price"
+            />
+            <img src="../images/knife.jpg" width="250px" height="250px" />
+            <h4>Kitchen Knife Set</h4>
+            <div class="rating">
+              <i class="fa fa-star"></i>
+              <i class="fa fa-star"></i>
+              <i class="fa fa-star"></i>
+              <i class="fa fa-star-o"></i>
+              <i class="fa fa-star-o"></i>
+            </div>
+            <p>₹760.00</p>
+            <input
+              type="number"
+              name="product_quantity"
+              id="product_quantity"
+              min="0"
+              value="1"
+            />
+            <button type="submit" class="btn">Add To Cart</button>
+          </form>
+        </div>
+      </div>
+    </div>
+    <footer class="footer-distributed">
+      <div class="footer-left">
+        <p
+          class="footer-links"
+          style="
+            position: absolute;
+            bottom: 90px;
+            left: 90px;
+            font-family: system-ui, -apple-system, BlinkMacSystemFont,
+              'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans',
+              'Helvetica Neue', sans-serif;
+          "
+        >
+          <a
+            href="home.html#top"
+            style="position: absolute; top: -200px; font-weight: 999"
+            >Home</a
+          >
+          <a
+            href="#home.html#home"
+            style="position: absolute; top: -150px; font-weight: 999"
+            >About</a
+          >
+          <a
+            href="#top"
+            style="position: absolute; top: -100px; font-weight: 999"
+            >Products</a
+          >
+        </p>
+
+        <p class="footer-company-name">
+          Copyright © 2023
+          <span style="font-family: 'Sancreek', cursive; font-size: 14px"
+            >paakashala</span
+          >
+          All rights reserved
+        </p>
+      </div>
+      <div class="footer-center">
+        <div>
+          <i class="fa fa-map-marker"></i>
+          <p
+            style="
+              font-family: system-ui, -apple-system, BlinkMacSystemFont,
+                'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans',
+                'Helvetica Neue', sans-serif;
+            "
+          >
+            Bengaluru,Karnataka
+          </p>
+        </div>
+
+        <div>
+          <i class="fa fa-phone"></i>
+          <a
+            href="tel:+91 98786858"
+            style="
+              font-size: medium;
+              text-decoration: none;
+              text-transform: none;
+              color: beige;
+              font-family: system-ui, -apple-system, BlinkMacSystemFont,
+                'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans',
+                'Helvetica Neue', sans-serif;
+            "
+            >+91 98786858</a
+          >
+        </div>
+        <div>
+          <i class="fa fa-envelope"></i>
+          <a
+            href="mailto:paakashala@gmail.com"
+            style="
+              font-family: system-ui, -apple-system, BlinkMacSystemFont,
+                'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans',
+                'Helvetica Neue', sans-serif;
+              text-decoration: none;
+              text-transform: none;
+              color: beige;
+            "
+          >
+            paakashala@gmail.com</a
+          >
+        </div>
+      </div>
+      <div id="footer-right">
+        <section>
+          <div id="aboutus">
+            <b id="web"><span style="font-size: 40px">paakashala</span></b>
+            <p id="content">
+              A shop for quality kitchen appliances.<br />Be the chef of your
+              dreams.
+            </p>
+          </div>
+        </section>
+        <section>
+          <div id="follow">
+            <h4 id="us">Follow us on</h4>
+            <a href="#"><span class="fa fa-facebook-f"></span></a
+            >&nbsp;&nbsp;&nbsp;&nbsp;
+            <a href="#"><span class="fa fa-twitter"></span></a
+            >&nbsp;&nbsp;&nbsp;&nbsp;
+            <a href="#"><span class="fa fa-instagram"></span></a
+            >&nbsp;&nbsp;&nbsp;&nbsp;
+            <a href="#"><span class="fa fa-youtube"></span></a
+            >&nbsp;&nbsp;&nbsp;&nbsp;
+            <a href="#"><span class="fa fa-linkedin"></span></a>
+          </div>
+        </section>
+      </div>
+    </footer>
+    <script
+      type="module"
+      src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"
+    ></script>
+    <script
+      nomodule
+      src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"
+    ></script>
+    <script src="https://unpkg.com/swiper@8/swiper-bundle.min.js"></script>
+  </body>
+</html>

@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Order Confirmation</title>
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        text-align: center;
+        background-color: bisque;
+      }
+
+      .container {
+        max-width: 600px;
+        margin: 50px auto;
+        padding: 20px;
+        background-color: #fff;
+        border-radius: 8px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+      }
+
+      h1 {
+        color: #333;
+      }
+
+      #truck-gif {
+        max-width: 300px;
+        height: auto;
+        margin-top: 20px;
+      }
+
+      #home-button {
+        display: inline-block;
+        padding: 10px 20px;
+        background-color: brown;
+        color: #fff;
+        text-decoration: none;
+        border-radius: 5px;
+        margin-top: 20px;
+      }
+
+      #home-button:hover {
+        background-color: green;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <h1>Your order was successfully placed.</h1>
+      <p>Thank you for ordering.</p>
+      <img src="images/truck-delivery.gif" alt="Package Truck" id="truck-gif" />
+      <p>Please visit us again here</p>
+      <form action="{{url_for('load')}}" method="POST">
+        <button type="submit" id="home-button">Home</button>
+      </form>
+    </div>
+  </body>
+</html>
